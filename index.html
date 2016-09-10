@@ -2,20 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
-    <title>My first AngularJS App</title>
+    <title>Applications index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  <body ng-app="NameCalculator">
-    <h1>My first AngularJS App</h1>
-    <div ng-controller="NameCalculatorController">
-      <div>
-        Your name:
-        <input type="text"
-          ng-model="name"
-          ng-keyup="displayNumeric();">
-      </div>
-      <div>total numeric value of person's name: {{totalValue}}</div>
+  <body>
+    <div class="container">
+      <h1>Applications index:</h1>
+      <ul>
+        <li><a href="/first-app/index.html">first-app</a></li>
+        <li><a href="/module1-solution/index.html">module1-solution</a></li>
+      </ul>
     </div>
   </body>
 </html>
