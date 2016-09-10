@@ -12,7 +12,9 @@
     $scope.checkLunch = function () {
       var numOfFoods = getNumOfFoods($scope.lunchMenu);
       var lunchResponse = getLunchResponse(numOfFoods);
+      var colorCSS = getColorCSS(numOfFoods);
       $scope.lunchResponse = lunchResponse;
+      $scope.colorCSS = colorCSS;
     };
 
     function getNumOfFoods (foodsString) {
@@ -38,6 +40,14 @@
         return "Enjoy!";
       } else {
         return "Too much!";
+      }
+    }
+
+    function getColorCSS(numOfFoodsFound) {
+      if (numOfFoodsFound == 0) {
+        return "red";
+      } else {
+        return "green";
       }
     }
   };

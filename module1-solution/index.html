@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
+      div.red { color: red;}
+      div.green { color: green;}
+      input.red { border-color: red;}
+      input.green { border-color: green;}
     </style>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
@@ -17,14 +21,14 @@
          <div class="form-group">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control"
+             class="form-control {{colorCSS}}"
              ng-model="lunchMenu">
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkLunch();">Check If Too Much</button>
          </div>
-         <div class="form-group message">
-           {{lunchResponse}}
+         <div class="form-group message {{colorCSS}}">
+           <p>{{lunchResponse}}</p>
          </div>
    </div>
 
